@@ -37,12 +37,6 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 >aws_secret_access_key=
 >```
 
-#### AWS Provider config - `main.tf`
-contains aws provider config and providers version controlling.
-
-#### Identity and Access Management - `iam.tf`
-Identity and Access Management for S3 and EC2 bucket.
-
 ### How to use Makefile
 
 ### Introduce Workspaces
