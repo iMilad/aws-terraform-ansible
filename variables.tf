@@ -14,5 +14,5 @@ variable "domain_name" {
 variable "aws_credentials_path" {
   description = "Path to aws credentials file"
   type        = string
-  default     = "$HOME/.aws/credentials"
+  default     = "~/.aws/credentials"
 }
