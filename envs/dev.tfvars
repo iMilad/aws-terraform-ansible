@@ -11,3 +11,6 @@ private_rds_subnets_count = 3
 
 # ! ============ Security Group ============
 dev_ips = ["46.75.184.136/32"]
+
+# ! ============ S3 Code Repo ============
+s3_bucket_force_destroy = true

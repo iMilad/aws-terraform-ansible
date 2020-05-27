@@ -9,6 +9,11 @@ variable "aws_credentials_path" {
   default     = "~/.aws/credentials"
 }
 
+variable "domain_name" {
+  description = "unique name for the project"
+  default     = "united83"
+}
+
 # ! ============ vpc.tf ============
 # Get all available zones
 data "aws_availability_zones" "available_zones" {}
@@ -34,4 +39,8 @@ variable "private_rds_subnets_count" {
 variable "dev_ips" {
   description = "IP address to give access for SSH."
   type        = list(string)
+}
+
+# ! ============ S3 Code Repo ============
+variable "s3_bucket_force_destroy" {
 }
