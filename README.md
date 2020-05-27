@@ -42,7 +42,3 @@ run `make help` for get available commands
 `terraform workspace new dev`
 
 `terraform workspace new prod`
-
-### Introduce Workspaces
-
-### Best Practices
