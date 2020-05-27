@@ -12,9 +12,7 @@ mv /tmp/terraform /usr/local/bin/terraform
 ## Install Ansible
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#from-pip
 
-## Step by Step Guide
-
-#### Creating AWS CLI Profile
+### Creating AWS CLI Profile
 
 `aws configure --profile dev`
 
