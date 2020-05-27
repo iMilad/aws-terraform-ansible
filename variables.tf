@@ -44,3 +44,31 @@ variable "dev_ips" {
 # ! ============ S3 Code Repo ============
 variable "s3_bucket_force_destroy" {
 }
+
+# ! ============ Database - RDS ============
+variable "db_storage_gb" {
+  description = "Allocation storage for database."
+  type        = number
+}
+variable "db_engine" {
+  description = "type of database, ex. mySQL, PostgreSQL, ..."
+  type        = string
+}
+variable "db_engine_version" {
+  description = "Database version to install."
+  type        = string
+}
+variable "db_instance_class" {
+  description = "EC2 instance type for database."
+  type        = string
+}
+variable "db_username" {
+  type = string
+}
+variable "db_password" {
+  type = string
+}
+variable "skip_final_snapshot" {
+  description = "if true, it does not create snapshot before termination."
+  type        = bool
+}
