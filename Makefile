@@ -39,8 +39,7 @@ destroy:
 	@echo "Switching to the [$(value ENV)] environment ..."
 	@terraform workspace select $(value ENV)
 
-	@echo "🔺 Are you really sure you want to \033[31mdelete resources\033[0m in [$(value ENV)] environment? . [y/N]: "
-	@read ans && [ $${ans:-N} = y ]
+	@read -p "🔺 Are you really sure you want to delete resources in [$(value ENV)] environment? [y/N]: " sure && case "$$sure" in [yY]) true;; *) false;; esac
 
 	@echo "\033[31mRunning terraform destroy ...\033[0m"
 	@terraform destroy \
