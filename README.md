@@ -36,6 +36,12 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 >```
 
 ### How to use Makefile
+run `make help` for get available commands
+
+### Create terraform workspaces (envs)
+`terraform workspace new dev`
+
+`terraform workspace new prod`
 
 ### Introduce Workspaces
 
