@@ -17,9 +17,9 @@ s3_bucket_force_destroy = true
 
 # ! ============ Database - RDS ============
 db_storage_gb = 10
-db_engine = "postgresql"
-db_engine_version = "11.6-R1"
+db_engine = "postgres"
+db_engine_version = "11.6"
 db_instance_class = "db.t2.micro"
 db_username = "united83"
-db_password = "pass"
+db_password = "xpassword"
 skip_final_snapshot = true
