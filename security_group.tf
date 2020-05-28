@@ -78,9 +78,9 @@ resource "aws_security_group" "_rds_sg" {
 
   # SQL access from public/private SGs
   ingress {
-    from_port = 3306
+    from_port = 5432
     protocol  = "tcp"
-    to_port   = 3306
+    to_port   = 5432
 
     security_groups = [
       aws_security_group._dev_sg.id,
