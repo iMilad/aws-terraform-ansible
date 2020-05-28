@@ -1,4 +1,5 @@
 # ! ============ VPC Endpoint for S3 ============
+# ! ============ Controlling access to services with VPC endpoints ============
 resource "aws_vpc_endpoint" "_priavte_s3_endpoint" {
   service_name = "com.amazonaws.${var.aws_region}.s3"
   vpc_id       = aws_vpc._vpc.id
@@ -12,6 +13,7 @@ resource "aws_vpc_endpoint" "_priavte_s3_endpoint" {
 
   policy = <<POLICY
 {
+    "Version": "2012-10-17",
     "Statement": [
         {
             "Action": "*",
