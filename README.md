@@ -1,4 +1,4 @@
-# Provisioning and Configuration AWS resource with Terraform and Ansible
+# Provisioning and Configuration AWS resource with Terraform and Ansible (WIP)
 
 ## Install Terraform
 https://learn.hashicorp.com/terraform/getting-started/install.html
