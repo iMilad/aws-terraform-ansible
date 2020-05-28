@@ -1,4 +1,8 @@
-# Provisioning and Configuration AWS resource with Terraform and Ansible (WIP)
+![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+![last-commit](https://img.shields.io/github/last-commit/imilad/aws-terraform-ansible)
+
+
+# Provisioning and Configuration AWS resource with Terraform and Ansible
 
 ## Install Terraform
 https://learn.hashicorp.com/terraform/getting-started/install.html
