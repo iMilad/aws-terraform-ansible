@@ -36,7 +36,11 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 >```
 
 ### How to use Makefile
-run `make help` for get available commands
+**Note** 
+
+* Makefile is using plan file for applying new infrastructure so always run `make plan ENV=<YOUR-ENV>` at first and then `make apply`. (this is a best practice for terraform to always run at first `terraform plan` and then `apply`.)
+
+* run `make help` for get available commands
 
 ### Create terraform workspaces (envs)
 `terraform workspace new dev`
