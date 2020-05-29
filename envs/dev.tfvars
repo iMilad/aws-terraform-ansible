@@ -1,10 +1,12 @@
 # ! ============ main.tf ============
 aws_region = "us-east-1"
 
-# ! ============ vpc.tf ============
-# VPC
-vpc_cidrs = "10.20.0.0/16"
+# ! ============ Key Pair ============
+key_name        = "ec2key"
+public_key_path = "~/.ssh/ec2key.pub"
 
+# ! ============ vpc.tf ============
+vpc_cidrs = "10.20.0.0/16"
 public_subnets_count      = 2
 private_subnets_count     = 2
 private_rds_subnets_count = 2
@@ -29,3 +31,12 @@ alb_healthy_threshold   = 2
 alb_unhealthy_threshold = 2
 alb_interval            = 30
 alb_timeout             = 5
+
+# ! ============ ASG ============
+asg_lc_instance_type = "t2.micro"
+asg_image_id         = "ami-0323c3dd2da7fb37d"
+asg_min_size         = 1
+asg_max_size         = 3
+asg_grace            = 300
+asg_hc_type          = "EC2"
+asg_cap              = 2

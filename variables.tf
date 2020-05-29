@@ -14,6 +14,14 @@ variable "domain_name" {
   default     = "united83"
 }
 
+# ! ============ Key Pair ============
+variable "key_name" {
+  type = string
+}
+variable "public_key_path" {
+  type = string
+}
+
 # ! ============ vpc.tf ============
 # Get all available zones
 data "aws_availability_zones" "available_zones" {}
@@ -85,5 +93,28 @@ variable "alb_timeout" {
   type = number
 }
 variable "alb_unhealthy_threshold" {
+  type = number
+}
+
+# ! ============ ASG ============
+variable "asg_lc_instance_type" {
+  type = string
+}
+variable "asg_image_id" {
+  type = string
+}
+variable "asg_max_size" {
+  type = number
+}
+variable "asg_min_size" {
+  type = number
+}
+variable "asg_grace" {
+  type = number
+}
+variable "asg_hc_type" {
+  type = string
+}
+variable "asg_cap" {
   type = number
 }
