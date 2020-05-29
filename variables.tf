@@ -72,3 +72,18 @@ variable "skip_final_snapshot" {
   description = "if true, it does not create snapshot before termination."
   type        = bool
 }
+
+# ! ============ ELB ============
+# Target Group
+variable "alb_healthy_threshold" {
+  type = number
+}
+variable "alb_interval" {
+  type = number
+}
+variable "alb_timeout" {
+  type = number
+}
+variable "alb_unhealthy_threshold" {
+  type = number
+}

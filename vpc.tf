@@ -31,6 +31,8 @@ resource "aws_route_table" "_public_rt" {
   }
 }
 
+# private route table become as a main/default table, so whatever is not explicitly not configured will be associated
+# with private table, like RDS subnets.
 resource "aws_default_route_table" "my_private_rt" {
   default_route_table_id = aws_vpc._vpc.default_route_table_id
 
