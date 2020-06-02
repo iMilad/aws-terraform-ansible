@@ -50,3 +50,9 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 `terraform workspace new dev`
 
 `terraform workspace new prod`
+
+Create  ssh key
+---------------
+```
+$ ssh-keygen
+```
