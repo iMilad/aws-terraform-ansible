@@ -5,7 +5,7 @@
 # Provisioning and Configuration AWS resource with Terraform and Ansible
 
 ## AWS Architecture Diagram
-Lucidchart [Diagram](https://app.lucidchart.com/invitations/accept/5be89c4b-b03b-4ced-8a9f-25802a4cf9c0)
+Lucidchart [Diagram](https://app.lucidchart.com/documents/view/f438462e-3310-45fe-8d7b-a7490f82b6ff/0_0)
 
 ## Install Terraform
 https://learn.hashicorp.com/terraform/getting-started/install.html
