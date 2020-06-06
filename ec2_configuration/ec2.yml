@@ -1,0 +1,47 @@
+---
+
+- hosts: base-ami
+  become: yes
+  remote_user: ec2-user
+  become_user: root
+  become_method: sudo
+  gather_facts: False
+
+  vars_files:
+    - envs/dev.yml
+
+  tasks:
+
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+        update_only: yes
+
+    - name: Install docker
+      yum:
+        name:
+          - docker
+        state: installed
+
+    - name: docker-py
+      pip:
+        name: docker-py
+
+    - name: Start docker service
+      service:
+        name: docker
+        state: restarted
+
+    - name: Enable Service
+      systemd:
+        name: docker
+        enabled: yes
+
+    - name: Create Ngnix container
+      docker_container:
+        name: "{{ container_name }}"
+        image: "{{ image_name }}"
+        state: started
+        ports:
+          - "{{ host_port }}:{{ container_port }}"

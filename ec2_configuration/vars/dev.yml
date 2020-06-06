@@ -1,0 +1,6 @@
+# App Container
+container_name: hello-dev
+image_name: nginx
+host_port: 80
+container_port: 80
+
