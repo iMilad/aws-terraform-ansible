@@ -2,8 +2,7 @@
 resource "aws_launch_configuration" "_asg_lc" {
   name_prefix = "x-"
 
-  # TODO: Using customized AMI with pre-installed configuration
-  image_id      = var.asg_image_id
+  image_id      = aws_ami_from_instance.custom_ami.id
   instance_type = var.asg_lc_instance_type
 
   security_groups      = [aws_security_group._private_sg.id]

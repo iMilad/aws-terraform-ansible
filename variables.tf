@@ -96,11 +96,19 @@ variable "alb_unhealthy_threshold" {
   type = number
 }
 
-# ! ============ ASG ============
-variable "asg_lc_instance_type" {
+# ! ============ Customized AMI ============
+variable "ami_base_id" {
   type = string
 }
-variable "asg_image_id" {
+variable "ec2_base_instance_type" {
+  type = string
+}
+variable "ec2_base_name" {
+  type = string
+}
+
+# ! ============ ASG ============
+variable "asg_lc_instance_type" {
   type = string
 }
 variable "asg_max_size" {

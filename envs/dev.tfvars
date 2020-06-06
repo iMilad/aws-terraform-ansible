@@ -32,9 +32,13 @@ alb_unhealthy_threshold = 2
 alb_interval            = 30
 alb_timeout             = 5
 
+# ! ============ Customized AMI ============
+ami_base_id         = "ami-0323c3dd2da7fb37d"
+ec2_base_instance_type = "t2.micro"
+ec2_base_name = "base_ami"
+
 # ! ============ ASG ============
 asg_lc_instance_type = "t2.micro"
-asg_image_id         = "ami-0323c3dd2da7fb37d"
 asg_min_size         = 1
 asg_max_size         = 3
 asg_grace            = 300
