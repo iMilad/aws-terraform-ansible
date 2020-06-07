@@ -6,7 +6,7 @@ key_name        = "ec2key"
 public_key_path = "~/.ssh/ec2key.pub"
 
 # ! ============ vpc.tf ============
-vpc_cidrs = "10.40.0.0/16"
+vpc_cidrs                 = "10.40.0.0/16"
 public_subnets_count      = 2
 private_subnets_count     = 2
 private_rds_subnets_count = 2
@@ -33,9 +33,9 @@ alb_interval            = 30
 alb_timeout             = 5
 
 # ! ============ Customized AMI ============
-ami_base_id         = "ami-0323c3dd2da7fb37d"
+ami_base_id            = "ami-0323c3dd2da7fb37d"
 ec2_base_instance_type = "t2.micro"
-ec2_base_name = "base_ami"
+ec2_base_name          = "base_ami"
 
 # ! ============ ASG ============
 asg_lc_instance_type = "t2.micro"

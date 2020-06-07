@@ -1,5 +1,5 @@
 resource "aws_instance" "base" {
-  ami = var.ami_base_id
+  ami           = var.ami_base_id
   instance_type = var.ec2_base_instance_type
 
   key_name               = aws_key_pair._key_pair.id
@@ -12,7 +12,7 @@ resource "aws_instance" "base" {
 
   provisioner "local-exec" {
     command = <<EOD
-cat <<EOF > ./config/ec2_hosts
+cat <<EOF > ./ec2_configuration/ec2_hosts
 [${var.ec2_base_name}]
 ${aws_instance.base.public_ip}
 EOF
@@ -25,6 +25,6 @@ EOD
 }
 
 resource "aws_ami_from_instance" "custom_ami" {
-  name = "asg-${terraform.workspace}"
+  name               = "asg-${terraform.workspace}"
   source_instance_id = aws_instance.base.id
 }
