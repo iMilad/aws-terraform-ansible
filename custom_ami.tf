@@ -20,7 +20,7 @@ EOD
   }
 
   provisioner "local-exec" {
-    command = "aws ec2 wait instance-status-ok --instance-ids ${aws_instance.base.id} && ansible-playbook -i ./ec2_configuration/ec2_hosts ./ec2_configuration/ec2.yml"
+    command = "aws ec2 wait instance-status-ok --instance-ids ${aws_instance.base.id} && ansible-playbook -i ./ec2_configuration/ec2_hosts --private-key ~/.ssh/ec2key ./ec2_configuration/ec2.yml"
   }
 }
 

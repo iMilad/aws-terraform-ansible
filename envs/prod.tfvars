@@ -33,7 +33,7 @@ alb_interval            = 30
 alb_timeout             = 5
 
 # ! ============ Customized AMI ============
-ami_base_id            = "ami-0323c3dd2da7fb37d"
+ami_base_id            = "ami-09d95fab7fff3776c"
 ec2_base_instance_type = "t2.micro"
 ec2_base_name          = "base_ami"
 
